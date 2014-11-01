@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 int NinjaFlight;
 int RandomTopTunnelPosition;
@@ -17,6 +19,8 @@ BOOL isCalled;
 BOOL gameHasBegun;
 BOOL ninjaDown;
 int ninjaDownCount;
+NSString *pathToGetPointSound;
+NSString *pathToNinjaCrashSound;
 
 @interface GameController : UIViewController{
     
@@ -35,7 +39,14 @@ int ninjaDownCount;
     
     NSTimer *NinjaMovement;
     NSTimer *TunnelMovement;
+    
+    AVAudioPlayer *audioPlayerGetPointSound;
+    AVAudioPlayer *audioPlayerNinjaCrash;
+    AVAudioSession *audiosession;
+    
 }
+
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 - (IBAction)SaveScore:(id)sender;
 - (IBAction)TryAgain:(id)sender;
@@ -44,5 +55,7 @@ int ninjaDownCount;
 -(void)PlaceTunnels;
 -(void)Score;
 -(void)GameOver;
+-(void)GetPointSound;
+-(void)ninjaCrashSound;
 
 @end
