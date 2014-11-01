@@ -142,6 +142,9 @@
 
 - (IBAction)SaveScore:(id)sender {
     
+    int tt = Scores;
+    NSString *tyt = Username.text;
+    int r = 5;
 }
 
 - (IBAction)TryAgain:(id)sender {
