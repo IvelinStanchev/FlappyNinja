@@ -14,8 +14,6 @@
 
 @implementation GameController
 
-@synthesize audioPlayer;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,14 +25,6 @@
 
 - (void)viewDidLoad
 {
-    
-    pathToGetPointSound = [[NSBundle mainBundle] pathForResource:@"get-point-effect" ofType:@"mp3"];
-    audioPlayerGetPointSound = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:pathToGetPointSound] error:NULL];
-    [audioPlayerGetPointSound prepareToPlay];
-    
-    pathToNinjaCrashSound = [[NSBundle mainBundle] pathForResource:@"ninja-down-effect" ofType:@"mp3"];
-    audioPlayerNinjaCrash = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:pathToNinjaCrashSound] error:NULL];
-    [audioPlayerNinjaCrash prepareToPlay];
     
     Username.hidden = YES;
     TryAgain.hidden = YES;
@@ -60,8 +50,6 @@
 }
 
 -(void)GameOver{
-    
-    [audioPlayerNinjaCrash play];
     
     [NinjaMovement invalidate];
     [TunnelMovement invalidate];
@@ -154,6 +142,9 @@
 
 - (IBAction)SaveScore:(id)sender {
     
+    int tt = Scores;
+    NSString *tyt = Username.text;
+    int r = 5;
 }
 
 - (IBAction)TryAgain:(id)sender {
@@ -208,8 +199,6 @@
 -(void)Score{
     
     Scores++;
-    [self GetPointSound];
-    
     ScoreLabel.text = [NSString stringWithFormat:@"%i", Scores];
     
 }
@@ -236,10 +225,6 @@
     if (ninjaDown == YES) {
         NinjaFlight = 20;
     }
-}
-
--(void)GetPointSound{
-    [audioPlayerGetPointSound play];
 }
 
 @end
