@@ -36,6 +36,7 @@
 		77B0E1811A0547FF0002840D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1801A0547FF0002840D /* StoreKit.framework */; };
 		77B0E1831A05480B0002840D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1821A05480B0002840D /* SystemConfiguration.framework */; };
 		77B0E1861A055A5C0002840D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B0E1851A055A5C0002840D /* Reachability.m */; };
+		77B1D0661A066B4400C813C8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B1D0651A066B4400C813C8 /* CoreData.framework */; };
 		77BB2A6B1A05026F00B211CF /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A671A05026F00B211CF /* background-music.mp3 */; };
 		77BB2A6C1A05026F00B211CF /* get-point-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A681A05026F00B211CF /* get-point-effect.mp3 */; };
 		77BB2A6D1A05026F00B211CF /* ninja-down-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A691A05026F00B211CF /* ninja-down-effect.mp3 */; };
@@ -52,9 +53,6 @@
 		77EC08231A063B9F00D7A95D /* AllScores.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC08201A063B9F00D7A95D /* AllScores.png */; };
 		77EC082B1A063E3600D7A95D /* flappy-ninja-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC082A1A063E3600D7A95D /* flappy-ninja-text.png */; };
 		77EC082D1A06407800D7A95D /* YourScoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC082C1A06407800D7A95D /* YourScoresButton.png */; };
-		FEAB28A01A065B7E00C5D9C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB289F1A065B7E00C5D9C2 /* Default-568h@2x.png */; };
-		FEAB28A21A06626200C5D9C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAB28A11A06626200C5D9C2 /* CoreData.framework */; };
-		FEAB28A51A06639D00C5D9C2 /* FlappyNinja.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEAB28A31A06639D00C5D9C2 /* FlappyNinja.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +102,7 @@
 		77B0E1821A05480B0002840D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		77B0E1841A055A5C0002840D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		77B0E1851A055A5C0002840D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		77B1D0651A066B4400C813C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		77BB2A671A05026F00B211CF /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
 		77BB2A681A05026F00B211CF /* get-point-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "get-point-effect.mp3"; sourceTree = "<group>"; };
 		77BB2A691A05026F00B211CF /* ninja-down-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ninja-down-effect.mp3"; sourceTree = "<group>"; };
@@ -120,9 +119,6 @@
 		77EC08201A063B9F00D7A95D /* AllScores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AllScores.png; sourceTree = "<group>"; };
 		77EC082A1A063E3600D7A95D /* flappy-ninja-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-text.png"; sourceTree = "<group>"; };
 		77EC082C1A06407800D7A95D /* YourScoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YourScoresButton.png; sourceTree = "<group>"; };
-		FEAB289F1A065B7E00C5D9C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FEAB28A11A06626200C5D9C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FEAB28A41A06639D00C5D9C2 /* FlappyNinja.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlappyNinja.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEAB28A21A06626200C5D9C2 /* CoreData.framework in Frameworks */,
+				77B1D0661A066B4400C813C8 /* CoreData.framework in Frameworks */,
 				77B0E1771A0547CE0002840D /* CoreLocation.framework in Frameworks */,
 				77B0E1831A05480B0002840D /* SystemConfiguration.framework in Frameworks */,
 				77B0E1811A0547FF0002840D /* StoreKit.framework in Frameworks */,
@@ -186,8 +182,6 @@
 		77B052331A03B0C700A3C6CE = {
 			isa = PBXGroup;
 			children = (
-				FEAB28A11A06626200C5D9C2 /* CoreData.framework */,
-				FEAB289F1A065B7E00C5D9C2 /* Default-568h@2x.png */,
 				77B0E1871A055A660002840D /* InternetConnectionFiles */,
 				77BB2A661A05024900B211CF /* Sounds */,
 				77AD4A8E1A04067B000F1C41 /* Images */,
@@ -211,6 +205,7 @@
 		77B0523E1A03B0C700A3C6CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77B1D0651A066B4400C813C8 /* CoreData.framework */,
 				77B0E1821A05480B0002840D /* SystemConfiguration.framework */,
 				77B0E1801A0547FF0002840D /* StoreKit.framework */,
 				77B0E17E1A0547F80002840D /* Security.framework */,
@@ -234,7 +229,6 @@
 		77B052451A03B0C700A3C6CE /* FlappyNinja */ = {
 			isa = PBXGroup;
 			children = (
-				FEAB28A31A06639D00C5D9C2 /* FlappyNinja.xcdatamodeld */,
 				77B0524E1A03B0C700A3C6CE /* AppDelegate.h */,
 				77B0524F1A03B0C700A3C6CE /* AppDelegate.m */,
 				77B052511A03B0C700A3C6CE /* Main.storyboard */,
@@ -399,7 +393,6 @@
 				77BB2A781A0507EF00B211CF /* top.png in Resources */,
 				77ABDAEB1A062AE900452218 /* GameStart.png in Resources */,
 				77BB2A821A05083A00B211CF /* column-top.png in Resources */,
-				FEAB28A01A065B7E00C5D9C2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +416,6 @@
 				77B052771A03B0FF00A3C6CE /* MenuViewController.m in Sources */,
 				77B0524C1A03B0C700A3C6CE /* main.m in Sources */,
 				77B0E1861A055A5C0002840D /* Reachability.m in Sources */,
-				FEAB28A51A06639D00C5D9C2 /* FlappyNinja.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyNinja/FlappyNinja-Prefix.pch";
 				INFOPLIST_FILE = "FlappyNinja/FlappyNinja-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -573,7 +565,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyNinja/FlappyNinja-Prefix.pch";
 				INFOPLIST_FILE = "FlappyNinja/FlappyNinja-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -650,19 +642,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FEAB28A31A06639D00C5D9C2 /* FlappyNinja.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FEAB28A41A06639D00C5D9C2 /* FlappyNinja.xcdatamodel */,
-			);
-			currentVersion = FEAB28A41A06639D00C5D9C2 /* FlappyNinja.xcdatamodel */;
-			path = FlappyNinja.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 77B052341A03B0C700A3C6CE /* Project object */;
 }
