@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77ABDAEB1A062AE900452218 /* GameStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAEA1A062AE900452218 /* GameStart.png */; };
+		77ABDAEE1A062B0700452218 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAEC1A062B0700452218 /* PlayButton.png */; };
+		77ABDAEF1A062B0700452218 /* ScoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAED1A062B0700452218 /* ScoresButton.png */; };
 		77AD4A9F1A0411A7000F1C41 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AD4A9E1A0411A7000F1C41 /* GameController.m */; };
 		77B052401A03B0C700A3C6CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0523F1A03B0C700A3C6CE /* Foundation.framework */; };
 		77B052421A03B0C700A3C6CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B052411A03B0C700A3C6CE /* CoreGraphics.framework */; };
@@ -22,28 +25,33 @@
 		77B052691A03B0C700A3C6CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B052671A03B0C700A3C6CE /* InfoPlist.strings */; };
 		77B0526B1A03B0C700A3C6CE /* FlappyNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B0526A1A03B0C700A3C6CE /* FlappyNinjaTests.m */; };
 		77B052771A03B0FF00A3C6CE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B052761A03B0FF00A3C6CE /* MenuViewController.m */; };
-		FEB6326C1A06238B00C57216 /* FlappyNinja.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEB6326A1A06238B00C57216 /* FlappyNinja.xcdatamodeld */; };
-		FEB632721A0627B900C57216 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB632711A0627B900C57216 /* CoreData.framework */; };
-		FEC3AE5A1A0501780002CDFA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE531A0501780002CDFA /* background.png */; };
-		FEC3AE5B1A0501780002CDFA /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE541A0501780002CDFA /* bottom.png */; };
-		FEC3AE5C1A0501780002CDFA /* column-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE551A0501780002CDFA /* column-bottom.png */; };
-		FEC3AE5D1A0501780002CDFA /* column-top.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE561A0501780002CDFA /* column-top.png */; };
-		FEC3AE5E1A0501780002CDFA /* flappy-ninja-down.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE571A0501780002CDFA /* flappy-ninja-down.png */; };
-		FEC3AE5F1A0501780002CDFA /* flappy-ninja-flipped.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE581A0501780002CDFA /* flappy-ninja-flipped.png */; };
-		FEC3AE601A0501780002CDFA /* flappy-ninja-up.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE591A0501780002CDFA /* flappy-ninja-up.png */; };
-		FEC3AE621A0501950002CDFA /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE611A0501950002CDFA /* top.png */; };
-		FEC3AE641A0501FD0002CDFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE631A0501FD0002CDFA /* Default-568h@2x.png */; };
-		FEC3AE6F1A0507A20002CDFA /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE651A0507A10002CDFA /* default.png */; };
-		FEC3AE701A0507A20002CDFA /* ExitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE661A0507A10002CDFA /* ExitButton.png */; };
-		FEC3AE711A0507A20002CDFA /* GameBack.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE671A0507A10002CDFA /* GameBack.png */; };
-		FEC3AE721A0507A20002CDFA /* GameStart.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE681A0507A10002CDFA /* GameStart.png */; };
-		FEC3AE731A0507A20002CDFA /* horsey.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE691A0507A10002CDFA /* horsey.png */; };
-		FEC3AE741A0507A20002CDFA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE6A1A0507A10002CDFA /* icon.png */; };
-		FEC3AE751A0507A20002CDFA /* NinjaDown.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE6B1A0507A10002CDFA /* NinjaDown.png */; };
-		FEC3AE761A0507A20002CDFA /* NinjaUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE6C1A0507A20002CDFA /* NinjaUp.png */; };
-		FEC3AE771A0507A20002CDFA /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE6D1A0507A20002CDFA /* PlayButton.png */; };
-		FEC3AE781A0507A20002CDFA /* ScoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC3AE6E1A0507A20002CDFA /* ScoresButton.png */; };
-		FEC3AE7B1A05095D0002CDFA /* ScoresController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3AE7A1A05095D0002CDFA /* ScoresController.m */; };
+		77B0E1721A0547580002840D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1701A0547580002840D /* Bolts.framework */; };
+		77B0E1731A0547580002840D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1711A0547580002840D /* Parse.framework */; };
+		77B0E1751A0547BB0002840D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1741A0547BB0002840D /* CFNetwork.framework */; };
+		77B0E1771A0547CE0002840D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1761A0547CE0002840D /* CoreLocation.framework */; };
+		77B0E1791A0547D70002840D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1781A0547D70002840D /* libz.dylib */; };
+		77B0E17B1A0547E40002840D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E17A1A0547E40002840D /* MobileCoreServices.framework */; };
+		77B0E17D1A0547EE0002840D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E17C1A0547EE0002840D /* QuartzCore.framework */; };
+		77B0E17F1A0547F80002840D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E17E1A0547F80002840D /* Security.framework */; };
+		77B0E1811A0547FF0002840D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1801A0547FF0002840D /* StoreKit.framework */; };
+		77B0E1831A05480B0002840D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0E1821A05480B0002840D /* SystemConfiguration.framework */; };
+		77B0E1861A055A5C0002840D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B0E1851A055A5C0002840D /* Reachability.m */; };
+		77BB2A6B1A05026F00B211CF /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A671A05026F00B211CF /* background-music.mp3 */; };
+		77BB2A6C1A05026F00B211CF /* get-point-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A681A05026F00B211CF /* get-point-effect.mp3 */; };
+		77BB2A6D1A05026F00B211CF /* ninja-down-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A691A05026F00B211CF /* ninja-down-effect.mp3 */; };
+		77BB2A701A05041100B211CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BB2A6F1A05041100B211CF /* AudioToolbox.framework */; };
+		77BB2A741A0507BE00B211CF /* flappy-ninja-flipped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A731A0507BE00B211CF /* flappy-ninja-flipped.png */; };
+		77BB2A771A0507EF00B211CF /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A751A0507EF00B211CF /* bottom.png */; };
+		77BB2A781A0507EF00B211CF /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A761A0507EF00B211CF /* top.png */; };
+		77BB2A7B1A05081800B211CF /* flappy-ninja-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A791A05081800B211CF /* flappy-ninja-down.png */; };
+		77BB2A7C1A05081800B211CF /* flappy-ninja-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A7A1A05081800B211CF /* flappy-ninja-up.png */; };
+		77BB2A801A05083A00B211CF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A7D1A05083A00B211CF /* background.png */; };
+		77BB2A811A05083A00B211CF /* column-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A7E1A05083A00B211CF /* column-bottom.png */; };
+		77BB2A821A05083A00B211CF /* column-top.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BB2A7F1A05083A00B211CF /* column-top.png */; };
+		77BD9CEB1A05229B0079AB07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BD9CEA1A05229B0079AB07 /* AVFoundation.framework */; };
+		77EC08231A063B9F00D7A95D /* AllScores.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC08201A063B9F00D7A95D /* AllScores.png */; };
+		77EC082B1A063E3600D7A95D /* flappy-ninja-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC082A1A063E3600D7A95D /* flappy-ninja-text.png */; };
+		77EC082D1A06407800D7A95D /* YourScoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77EC082C1A06407800D7A95D /* YourScoresButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77ABDAEA1A062AE900452218 /* GameStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameStart.png; sourceTree = "<group>"; };
+		77ABDAEC1A062B0700452218 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
+		77ABDAED1A062B0700452218 /* ScoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoresButton.png; sourceTree = "<group>"; };
 		77AD4A9D1A0411A7000F1C41 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		77AD4A9E1A0411A7000F1C41 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		77B0523C1A03B0C700A3C6CE /* FlappyNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,29 +89,34 @@
 		77B0526A1A03B0C700A3C6CE /* FlappyNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlappyNinjaTests.m; sourceTree = "<group>"; };
 		77B052751A03B0FF00A3C6CE /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		77B052761A03B0FF00A3C6CE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		FEB6326B1A06238B00C57216 /* FlappyNinja.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlappyNinja.xcdatamodel; sourceTree = "<group>"; };
-		FEB632711A0627B900C57216 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FEC3AE531A0501780002CDFA /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		FEC3AE541A0501780002CDFA /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
-		FEC3AE551A0501780002CDFA /* column-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "column-bottom.png"; sourceTree = "<group>"; };
-		FEC3AE561A0501780002CDFA /* column-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "column-top.png"; sourceTree = "<group>"; };
-		FEC3AE571A0501780002CDFA /* flappy-ninja-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-down.png"; sourceTree = "<group>"; };
-		FEC3AE581A0501780002CDFA /* flappy-ninja-flipped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-flipped.png"; sourceTree = "<group>"; };
-		FEC3AE591A0501780002CDFA /* flappy-ninja-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-up.png"; sourceTree = "<group>"; };
-		FEC3AE611A0501950002CDFA /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
-		FEC3AE631A0501FD0002CDFA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FEC3AE651A0507A10002CDFA /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
-		FEC3AE661A0507A10002CDFA /* ExitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitButton.png; sourceTree = "<group>"; };
-		FEC3AE671A0507A10002CDFA /* GameBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBack.png; sourceTree = "<group>"; };
-		FEC3AE681A0507A10002CDFA /* GameStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameStart.png; sourceTree = "<group>"; };
-		FEC3AE691A0507A10002CDFA /* horsey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horsey.png; sourceTree = "<group>"; };
-		FEC3AE6A1A0507A10002CDFA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		FEC3AE6B1A0507A10002CDFA /* NinjaDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NinjaDown.png; sourceTree = "<group>"; };
-		FEC3AE6C1A0507A20002CDFA /* NinjaUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NinjaUp.png; sourceTree = "<group>"; };
-		FEC3AE6D1A0507A20002CDFA /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
-		FEC3AE6E1A0507A20002CDFA /* ScoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoresButton.png; sourceTree = "<group>"; };
-		FEC3AE791A05095D0002CDFA /* ScoresController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresController.h; sourceTree = "<group>"; };
-		FEC3AE7A1A05095D0002CDFA /* ScoresController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresController.m; sourceTree = "<group>"; };
+		77B0E1701A0547580002840D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		77B0E1711A0547580002840D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		77B0E1741A0547BB0002840D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		77B0E1761A0547CE0002840D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		77B0E1781A0547D70002840D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		77B0E17A1A0547E40002840D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		77B0E17C1A0547EE0002840D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		77B0E17E1A0547F80002840D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		77B0E1801A0547FF0002840D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		77B0E1821A05480B0002840D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		77B0E1841A055A5C0002840D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		77B0E1851A055A5C0002840D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		77BB2A671A05026F00B211CF /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		77BB2A681A05026F00B211CF /* get-point-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "get-point-effect.mp3"; sourceTree = "<group>"; };
+		77BB2A691A05026F00B211CF /* ninja-down-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ninja-down-effect.mp3"; sourceTree = "<group>"; };
+		77BB2A6F1A05041100B211CF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		77BB2A731A0507BE00B211CF /* flappy-ninja-flipped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-flipped.png"; sourceTree = "<group>"; };
+		77BB2A751A0507EF00B211CF /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
+		77BB2A761A0507EF00B211CF /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
+		77BB2A791A05081800B211CF /* flappy-ninja-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-down.png"; sourceTree = "<group>"; };
+		77BB2A7A1A05081800B211CF /* flappy-ninja-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-up.png"; sourceTree = "<group>"; };
+		77BB2A7D1A05083A00B211CF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		77BB2A7E1A05083A00B211CF /* column-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "column-bottom.png"; sourceTree = "<group>"; };
+		77BB2A7F1A05083A00B211CF /* column-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "column-top.png"; sourceTree = "<group>"; };
+		77BD9CEA1A05229B0079AB07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		77EC08201A063B9F00D7A95D /* AllScores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AllScores.png; sourceTree = "<group>"; };
+		77EC082A1A063E3600D7A95D /* flappy-ninja-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-text.png"; sourceTree = "<group>"; };
+		77EC082C1A06407800D7A95D /* YourScoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YourScoresButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +124,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEB632721A0627B900C57216 /* CoreData.framework in Frameworks */,
+				77B0E1771A0547CE0002840D /* CoreLocation.framework in Frameworks */,
+				77B0E1831A05480B0002840D /* SystemConfiguration.framework in Frameworks */,
+				77B0E1811A0547FF0002840D /* StoreKit.framework in Frameworks */,
+				77B0E17F1A0547F80002840D /* Security.framework in Frameworks */,
+				77B0E17D1A0547EE0002840D /* QuartzCore.framework in Frameworks */,
+				77B0E17B1A0547E40002840D /* MobileCoreServices.framework in Frameworks */,
+				77B0E1791A0547D70002840D /* libz.dylib in Frameworks */,
 				77B052421A03B0C700A3C6CE /* CoreGraphics.framework in Frameworks */,
+				77B0E1751A0547BB0002840D /* CFNetwork.framework in Frameworks */,
+				77BD9CEB1A05229B0079AB07 /* AVFoundation.framework in Frameworks */,
+				77BB2A701A05041100B211CF /* AudioToolbox.framework in Frameworks */,
+				77B0E1731A0547580002840D /* Parse.framework in Frameworks */,
+				77B0E1721A0547580002840D /* Bolts.framework in Frameworks */,
 				77B052441A03B0C700A3C6CE /* UIKit.framework in Frameworks */,
 				77B052401A03B0C700A3C6CE /* Foundation.framework in Frameworks */,
 			);
@@ -131,24 +158,20 @@
 		77AD4A8E1A04067B000F1C41 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FEC3AE651A0507A10002CDFA /* default.png */,
-				FEC3AE661A0507A10002CDFA /* ExitButton.png */,
-				FEC3AE671A0507A10002CDFA /* GameBack.png */,
-				FEC3AE681A0507A10002CDFA /* GameStart.png */,
-				FEC3AE691A0507A10002CDFA /* horsey.png */,
-				FEC3AE6A1A0507A10002CDFA /* icon.png */,
-				FEC3AE6B1A0507A10002CDFA /* NinjaDown.png */,
-				FEC3AE6C1A0507A20002CDFA /* NinjaUp.png */,
-				FEC3AE6D1A0507A20002CDFA /* PlayButton.png */,
-				FEC3AE6E1A0507A20002CDFA /* ScoresButton.png */,
-				FEC3AE611A0501950002CDFA /* top.png */,
-				FEC3AE531A0501780002CDFA /* background.png */,
-				FEC3AE541A0501780002CDFA /* bottom.png */,
-				FEC3AE551A0501780002CDFA /* column-bottom.png */,
-				FEC3AE561A0501780002CDFA /* column-top.png */,
-				FEC3AE571A0501780002CDFA /* flappy-ninja-down.png */,
-				FEC3AE581A0501780002CDFA /* flappy-ninja-flipped.png */,
-				FEC3AE591A0501780002CDFA /* flappy-ninja-up.png */,
+				77EC082C1A06407800D7A95D /* YourScoresButton.png */,
+				77EC082A1A063E3600D7A95D /* flappy-ninja-text.png */,
+				77EC08201A063B9F00D7A95D /* AllScores.png */,
+				77ABDAEC1A062B0700452218 /* PlayButton.png */,
+				77ABDAED1A062B0700452218 /* ScoresButton.png */,
+				77ABDAEA1A062AE900452218 /* GameStart.png */,
+				77BB2A7D1A05083A00B211CF /* background.png */,
+				77BB2A7E1A05083A00B211CF /* column-bottom.png */,
+				77BB2A7F1A05083A00B211CF /* column-top.png */,
+				77BB2A791A05081800B211CF /* flappy-ninja-down.png */,
+				77BB2A7A1A05081800B211CF /* flappy-ninja-up.png */,
+				77BB2A751A0507EF00B211CF /* bottom.png */,
+				77BB2A761A0507EF00B211CF /* top.png */,
+				77BB2A731A0507BE00B211CF /* flappy-ninja-flipped.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -156,8 +179,8 @@
 		77B052331A03B0C700A3C6CE = {
 			isa = PBXGroup;
 			children = (
-				FEB632711A0627B900C57216 /* CoreData.framework */,
-				FEC3AE631A0501FD0002CDFA /* Default-568h@2x.png */,
+				77B0E1871A055A660002840D /* InternetConnectionFiles */,
+				77BB2A661A05024900B211CF /* Sounds */,
 				77AD4A8E1A04067B000F1C41 /* Images */,
 				77B052741A03B0DC00A3C6CE /* ViewControllers */,
 				77B052451A03B0C700A3C6CE /* FlappyNinja */,
@@ -179,9 +202,21 @@
 		77B0523E1A03B0C700A3C6CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77B052431A03B0C700A3C6CE /* UIKit.framework */,
+				77B0E1821A05480B0002840D /* SystemConfiguration.framework */,
+				77B0E1801A0547FF0002840D /* StoreKit.framework */,
+				77B0E17E1A0547F80002840D /* Security.framework */,
+				77B0E17C1A0547EE0002840D /* QuartzCore.framework */,
+				77B0E17A1A0547E40002840D /* MobileCoreServices.framework */,
+				77B0E1781A0547D70002840D /* libz.dylib */,
+				77B0E1761A0547CE0002840D /* CoreLocation.framework */,
+				77B0E1741A0547BB0002840D /* CFNetwork.framework */,
+				77B0E1701A0547580002840D /* Bolts.framework */,
+				77B0E1711A0547580002840D /* Parse.framework */,
+				77BD9CEA1A05229B0079AB07 /* AVFoundation.framework */,
+				77BB2A6F1A05041100B211CF /* AudioToolbox.framework */,
 				77B0523F1A03B0C700A3C6CE /* Foundation.framework */,
 				77B052411A03B0C700A3C6CE /* CoreGraphics.framework */,
+				77B052431A03B0C700A3C6CE /* UIKit.framework */,
 				77B0525E1A03B0C700A3C6CE /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -190,7 +225,6 @@
 		77B052451A03B0C700A3C6CE /* FlappyNinja */ = {
 			isa = PBXGroup;
 			children = (
-				FEB6326A1A06238B00C57216 /* FlappyNinja.xcdatamodeld */,
 				77B0524E1A03B0C700A3C6CE /* AppDelegate.h */,
 				77B0524F1A03B0C700A3C6CE /* AppDelegate.m */,
 				77B052511A03B0C700A3C6CE /* Main.storyboard */,
@@ -236,10 +270,27 @@
 				77B052761A03B0FF00A3C6CE /* MenuViewController.m */,
 				77AD4A9D1A0411A7000F1C41 /* GameController.h */,
 				77AD4A9E1A0411A7000F1C41 /* GameController.m */,
-				FEC3AE791A05095D0002CDFA /* ScoresController.h */,
-				FEC3AE7A1A05095D0002CDFA /* ScoresController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		77B0E1871A055A660002840D /* InternetConnectionFiles */ = {
+			isa = PBXGroup;
+			children = (
+				77B0E1841A055A5C0002840D /* Reachability.h */,
+				77B0E1851A055A5C0002840D /* Reachability.m */,
+			);
+			name = InternetConnectionFiles;
+			sourceTree = "<group>";
+		};
+		77BB2A661A05024900B211CF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				77BB2A671A05026F00B211CF /* background-music.mp3 */,
+				77BB2A681A05026F00B211CF /* get-point-effect.mp3 */,
+				77BB2A691A05026F00B211CF /* ninja-down-effect.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,28 +369,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BB2A7C1A05081800B211CF /* flappy-ninja-up.png in Resources */,
+				77BB2A7B1A05081800B211CF /* flappy-ninja-down.png in Resources */,
+				77EC08231A063B9F00D7A95D /* AllScores.png in Resources */,
+				77BB2A771A0507EF00B211CF /* bottom.png in Resources */,
+				77ABDAEE1A062B0700452218 /* PlayButton.png in Resources */,
+				77BB2A6B1A05026F00B211CF /* background-music.mp3 in Resources */,
+				77BB2A741A0507BE00B211CF /* flappy-ninja-flipped.png in Resources */,
+				77BB2A6D1A05026F00B211CF /* ninja-down-effect.mp3 in Resources */,
 				77B052581A03B0C700A3C6CE /* Images.xcassets in Resources */,
+				77EC082D1A06407800D7A95D /* YourScoresButton.png in Resources */,
+				77BB2A6C1A05026F00B211CF /* get-point-effect.mp3 in Resources */,
+				77EC082B1A063E3600D7A95D /* flappy-ninja-text.png in Resources */,
+				77ABDAEF1A062B0700452218 /* ScoresButton.png in Resources */,
+				77BB2A801A05083A00B211CF /* background.png in Resources */,
+				77BB2A811A05083A00B211CF /* column-bottom.png in Resources */,
 				77B0524A1A03B0C700A3C6CE /* InfoPlist.strings in Resources */,
 				77B052531A03B0C700A3C6CE /* Main.storyboard in Resources */,
-				FEC3AE5A1A0501780002CDFA /* background.png in Resources */,
-				FEC3AE5B1A0501780002CDFA /* bottom.png in Resources */,
-				FEC3AE5C1A0501780002CDFA /* column-bottom.png in Resources */,
-				FEC3AE5D1A0501780002CDFA /* column-top.png in Resources */,
-				FEC3AE5E1A0501780002CDFA /* flappy-ninja-down.png in Resources */,
-				FEC3AE5F1A0501780002CDFA /* flappy-ninja-flipped.png in Resources */,
-				FEC3AE601A0501780002CDFA /* flappy-ninja-up.png in Resources */,
-				FEC3AE621A0501950002CDFA /* top.png in Resources */,
-				FEC3AE641A0501FD0002CDFA /* Default-568h@2x.png in Resources */,
-				FEC3AE6F1A0507A20002CDFA /* default.png in Resources */,
-				FEC3AE701A0507A20002CDFA /* ExitButton.png in Resources */,
-				FEC3AE711A0507A20002CDFA /* GameBack.png in Resources */,
-				FEC3AE721A0507A20002CDFA /* GameStart.png in Resources */,
-				FEC3AE731A0507A20002CDFA /* horsey.png in Resources */,
-				FEC3AE741A0507A20002CDFA /* icon.png in Resources */,
-				FEC3AE751A0507A20002CDFA /* NinjaDown.png in Resources */,
-				FEC3AE761A0507A20002CDFA /* NinjaUp.png in Resources */,
-				FEC3AE771A0507A20002CDFA /* PlayButton.png in Resources */,
-				FEC3AE781A0507A20002CDFA /* ScoresButton.png in Resources */,
+				77BB2A781A0507EF00B211CF /* top.png in Resources */,
+				77ABDAEB1A062AE900452218 /* GameStart.png in Resources */,
+				77BB2A821A05083A00B211CF /* column-top.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,8 +411,7 @@
 				77AD4A9F1A0411A7000F1C41 /* GameController.m in Sources */,
 				77B052771A03B0FF00A3C6CE /* MenuViewController.m in Sources */,
 				77B0524C1A03B0C700A3C6CE /* main.m in Sources */,
-				FEC3AE7B1A05095D0002CDFA /* ScoresController.m in Sources */,
-				FEB6326C1A06238B00C57216 /* FlappyNinja.xcdatamodeld in Sources */,
+				77B0E1861A055A5C0002840D /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -477,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -490,12 +538,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyNinja/FlappyNinja-Prefix.pch";
 				INFOPLIST_FILE = "FlappyNinja/FlappyNinja-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -508,12 +556,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyNinja/FlappyNinja-Prefix.pch";
 				INFOPLIST_FILE = "FlappyNinja/FlappyNinja-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -590,19 +638,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FEB6326A1A06238B00C57216 /* FlappyNinja.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FEB6326B1A06238B00C57216 /* FlappyNinja.xcdatamodel */,
-			);
-			currentVersion = FEB6326B1A06238B00C57216 /* FlappyNinja.xcdatamodel */;
-			path = FlappyNinja.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 77B052341A03B0C700A3C6CE /* Project object */;
 }

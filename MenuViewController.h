@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface MenuViewController : UIViewController
+NSString *pathToBackgroundSound;
+
+@interface MenuViewController : UIViewController{
+    AVAudioPlayer *audioPlayerBackgroundSound;
+}
+- (IBAction)PlayGame:(id)sender;
 
 @end
