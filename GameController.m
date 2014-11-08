@@ -20,7 +20,7 @@
     CLPlacemark *placemark;
 }
 
-@synthesize audioPlayer;
+@synthesize audioPlayer, scores, scoresdb;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,15 +68,18 @@
     PublishScoresButton.hidden = YES;
     PhoneNumber.hidden = YES;
     ErrorMessageLabel.hidden = YES;
+    ExitButton.hidden = YES;
     
     ninjaDown = YES;
     
     ColumnTop.hidden = YES;
     ColumnBottom.hidden = YES;
+    Star.hidden = YES;
     
     gameHasBegun = NO;
     
     isCalled = NO;
+    isCalledFromStar = NO;
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -89,12 +92,33 @@
 }
 
 -(void)GameOver{
+    [starAnimationSubView stopAnimating];
     
+    Explosion.center = CGPointMake(Ninja.center.x, Ninja.center.y);
+    
+    NSArray *textPictures = [[NSArray alloc] initWithObjects:
+                             [UIImage imageNamed:@"explosion-7.png"],
+                             [UIImage imageNamed:@"explosion-1.png"],
+                             [UIImage imageNamed:@"explosion-2.png"],
+                             [UIImage imageNamed:@"explosion-3.png"],
+                             [UIImage imageNamed:@"explosion-4.png"],
+                             [UIImage imageNamed:@"explosion-5.png"],
+                             [UIImage imageNamed:@"explosion-6.png"],
+                             [UIImage imageNamed:@"explosion-7.png"], nil];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:textPictures[0]];
+    imageView.animationImages = textPictures;
+    imageView.animationDuration = 0.7;
+    imageView.animationRepeatCount = 1;
+    [imageView startAnimating];
+    
+    [Explosion addSubview: imageView];
+        
     [audioPlayerNinjaCrash play];
     
     [NinjaMovement invalidate];
     [TunnelMovement invalidate];
-    
+    [StarMovement invalidate];
     
     
     NinjaMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(NinjaMovingWhenGameOver) userInfo:nil repeats:YES];
@@ -138,6 +162,19 @@
     }
 }
 
+-(void)StarMoving{
+    
+    Star.center = CGPointMake(Star.center.x - 1.2, Star.center.y);
+    
+    if (CGRectIntersectsRect(Ninja.frame, Star.frame)) {
+        Star.hidden = YES;
+    }
+    
+    if (isCalledFromStar == NO && Star.hidden == YES) {
+        isCalledFromStar = YES;
+        [self Score];
+    }
+}
 
 -(void)PlaceTunnels{
     
@@ -148,7 +185,43 @@
     ColumnTop.center = CGPointMake(340, RandomTopTunnelPosition);
     ColumnBottom.center = CGPointMake(340, RandomBottomTunnelPosition);
     
+    if (Star.hidden == YES) {
+        Star.hidden = NO;
+    }
     
+    if (Star.center.x < -5) {
+        [self PlaceStar];
+        isCalledFromStar = NO;
+    }
+}
+
+-(void)PlaceStar{
+    RandomStarPosition = arc4random() %450;
+    RandomStarPosition += 50;
+    
+    NSInteger randomStartX = arc4random() %100;
+    randomStartX += 120;
+
+    
+    Star.center = CGPointMake(ColumnTop.center.x + randomStartX, RandomStarPosition);
+    
+    [starAnimationSubView removeFromSuperview];
+    
+    NSArray *starPictures = [[NSArray alloc] initWithObjects:
+                             [UIImage imageNamed:@"rotating-star-1.png"],
+                             [UIImage imageNamed:@"rotating-star-2.png"],
+                             [UIImage imageNamed:@"rotating-star-3.png"],
+                             [UIImage imageNamed:@"rotating-star-4.png"],
+                             [UIImage imageNamed:@"rotating-star-5.png"],
+                             [UIImage imageNamed:@"rotating-star-6.png"], nil];
+    
+    starAnimationSubView = [[UIImageView alloc] initWithImage:starPictures[0]];
+    starAnimationSubView.animationImages = starPictures;
+    starAnimationSubView.animationDuration = 0.5;
+    starAnimationSubView.animationRepeatCount = -1;
+    [starAnimationSubView startAnimating];
+    
+    [Star addSubview: starAnimationSubView];
 }
 
 -(void)NinjaMovingWhenGameOver{
@@ -174,16 +247,20 @@
         ColumnTop.hidden = YES;
         ColumnBottom.hidden = YES;
         Ninja.hidden = YES;
+        Star.hidden = YES;
         
         Username.hidden = NO;
         TryAgain.hidden = NO;
         SaveToMyScores.hidden = NO;
         PhoneNumber.hidden = NO;
         PublishScoresButton.hidden = NO;
+        ExitButton.hidden = NO;
     }
 }
 
 - (IBAction)PublishScore:(id)sender {
+
+    
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
@@ -218,6 +295,51 @@
 
 - (IBAction)SaveToMyScores:(id)sender {
     
+    if ([Username.text isEqualToString: @""]) {
+        ErrorMessageLabel.hidden = NO;
+        ErrorMessageLabel.text = @"Invalid username!";
+    }
+    else{
+    
+        NSManagedObjectContext *context = [self managedObjectContext];
+    
+        if (self.scoresdb) {
+            [self.scoresdb setValue:Username.text forKey:@"username"];
+            [self.scoresdb setValue:[NSNumber numberWithInteger: scores] forKey:@"userscore"];
+            [self.scoresdb setValue:[NSDate date] forKey:@"scoredate"];
+        }
+        else {
+            NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Scores" inManagedObjectContext:context];
+        
+            [newDevice setValue:Username.text forKey:@"username"];
+            [newDevice setValue:[NSNumber numberWithInteger:scores] forKey:@"userscore"];
+            [newDevice setValue:[NSDate date] forKey:@"scoredate"];
+        }
+    
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Can't save! %@ %@", error, [error localizedDescription]);
+        }
+    
+        NinjaFlight = 20;
+        
+        [NinjaMovement invalidate];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    
+    return context;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -253,7 +375,7 @@
             PFObject *userData = [PFObject objectWithClassName:@"Results"];
             userData[@"Username"] = Username.text;
             userData[@"PhoneNumber"] = PhoneNumber.text;
-            userData[@"Points"] = [NSNumber numberWithInt: Scores];
+            userData[@"Points"] = [NSNumber numberWithInt: scores];
             userData[@"Country"] = currentCountry;
             [userData saveInBackground];
             
@@ -281,14 +403,9 @@
     
 }
 
--(void) GetObjects{
-//    PFQuery *objects = [PFQuery queryWithClassName:@"Results"];
-//    [objects findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        NSLog(@"%@", objects[0][@"Points"]);
-//    }];
-}
-
 - (IBAction)TryAgain:(id)sender {
+    [self.view endEditing:YES];
+    
     [NinjaMovement invalidate];
     
     ErrorMessageLabel.hidden = YES;
@@ -300,9 +417,9 @@
     Ninja.image = [UIImage imageNamed:@"flappy-ninja-up.png"];
     
     TouchToBeginLabel.hidden = NO;
-    Scores = 0;
+    scores = 0;
     
-    ScoreLabel.text = [NSString stringWithFormat:@"%i", Scores];
+    ScoreLabel.text = [NSString stringWithFormat:@"%i", scores];
     
     Username.hidden = YES;
     TryAgain.hidden = YES;
@@ -310,12 +427,22 @@
     PhoneNumber.hidden = YES;
     PublishScoresButton.hidden = YES;
     
+    ExitButton.hidden = YES;
+    
     ColumnTop.hidden = YES;
     ColumnBottom.hidden = YES;
+    Star.hidden = YES;
     
     gameHasBegun = NO;
     
     isCalled = NO;
+    isCalledFromStar = NO;
+}
+
+- (IBAction)Exit:(id)sender {
+    [NinjaMovement invalidate];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)NinjaMoving{
@@ -335,17 +462,13 @@
     if (NinjaFlight < 0) {
         Ninja.image = [UIImage imageNamed:@"flappy-ninja-down.png"];
     }
-    
-    
-    
 }
 
 -(void)Score{
-    
-    Scores++;
+    scores++;
     [self GetPointSound];
     
-    ScoreLabel.text = [NSString stringWithFormat:@"%i", Scores];
+    ScoreLabel.text = [NSString stringWithFormat:@"%i", scores];
     
 }
 
@@ -355,16 +478,19 @@
         
         ColumnTop.hidden = NO;
         ColumnBottom.hidden = NO;
+        Star.center = CGPointMake(-100, 100);
         
         TouchToBeginLabel.hidden = YES;
         
-        Scores = 0;
+        scores = 0;
         
         NinjaMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(NinjaMoving) userInfo:nil repeats:YES];
         
         [self PlaceTunnels];
         
         TunnelMovement = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(TunnelMoving) userInfo:nil repeats:YES];
+        
+        StarMovement = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(StarMoving) userInfo:nil repeats:YES];
     }
     
     if (ninjaDown == YES) {
@@ -375,54 +501,5 @@
 -(void)GetPointSound{
     [audioPlayerGetPointSound play];
 }
-
-//- (void)handleLongPressGestures:(UILongPressGestureRecognizer *)sender
-//{
-//    if ([sender isEqual: self.longPresses]) {
-//        if (sender.state == UIGestureRecognizerStateBegan)
-//        {
-//            
-//
-//        }
-//    }
-//}
-//
-//- (void)handleDoubleTapGesture:(UITapGestureRecognizer *)sender {
-//    if (sender.state == UIGestureRecognizerStateRecognized) {
-//        NSLog(@"Double Tap");
-//        
-//        if (gameHasBegun == NO) {
-//            gameHasBegun = YES;
-//            
-//            ColumnTop.hidden = NO;
-//            ColumnBottom.hidden = NO;
-//            
-//            TouchToBeginLabel.hidden = YES;
-//            
-//            Scores = 0;
-//            
-//            NinjaMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(NinjaMoving) userInfo:nil repeats:YES];
-//            
-//            [self PlaceTunnels];
-//            
-//            TunnelMovement = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(TunnelMoving) userInfo:nil repeats:YES];
-//        }
-//        else{
-//            NinjaFlight = 20;
-//
-//        }
-//    }
-//}
-//
-//- (void)handleSingleTapGesture:(UITapGestureRecognizer *)sender {
-//    if (sender.state == UIGestureRecognizerStateRecognized) {
-//        NSLog(@"Tap");
-//        
-//        if (ninjaDown == YES) {
-//            NinjaFlight = 20;
-//        }
-//    }
-//}
-
 
 @end

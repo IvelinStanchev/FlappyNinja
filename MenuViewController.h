@@ -12,9 +12,12 @@
 
 NSString *pathToBackgroundSound;
 
-@interface MenuViewController : UIViewController{
+@interface MenuViewController : UIViewController<UIViewControllerTransitioningDelegate>{
     AVAudioPlayer *audioPlayerBackgroundSound;
+    IBOutlet UIButton *NinjaText;
 }
+
 - (IBAction)PlayGame:(id)sender;
+- (IBAction)Exit:(id)sender;
 
 @end

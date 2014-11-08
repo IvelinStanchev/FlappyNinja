@@ -8,8 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+    UIBackgroundTaskIdentifier backgroundTask;
+    NSTimer *gettingDataTimer;
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTask;
+@property NSInteger lastMaxPoints;
+@property BOOL calledForFirstTime;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
