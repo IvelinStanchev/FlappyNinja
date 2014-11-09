@@ -19,6 +19,14 @@
 		7705EBFF1A0D6A0400DEBF34 /* instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 7705EBFE1A0D6A0400DEBF34 /* instructions.png */; };
 		7713BD0F1A0F506A00101FE9 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7713BD0C1A0F506A00101FE9 /* CustomCell.m */; };
 		7713BD101A0F506A00101FE9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7713BD0E1A0F506A00101FE9 /* TableViewController.m */; };
+<<<<<<< HEAD
+=======
+		7713BD171A0F529200101FE9 /* ins01.png in Resources */ = {isa = PBXBuildFile; fileRef = 7713BD121A0F529200101FE9 /* ins01.png */; };
+		7713BD181A0F529200101FE9 /* ins02.png in Resources */ = {isa = PBXBuildFile; fileRef = 7713BD131A0F529200101FE9 /* ins02.png */; };
+		7713BD191A0F529200101FE9 /* ins03.png in Resources */ = {isa = PBXBuildFile; fileRef = 7713BD141A0F529200101FE9 /* ins03.png */; };
+		7713BD1A1A0F529200101FE9 /* ins04.png in Resources */ = {isa = PBXBuildFile; fileRef = 7713BD151A0F529200101FE9 /* ins04.png */; };
+		7713BD1B1A0F529200101FE9 /* ins05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7713BD161A0F529200101FE9 /* ins05.jpg */; };
+>>>>>>> origin/master
 		77ABDAEB1A062AE900452218 /* GameStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAEA1A062AE900452218 /* GameStart.png */; };
 		77ABDAEE1A062B0700452218 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAEC1A062B0700452218 /* PlayButton.png */; };
 		77ABDAEF1A062B0700452218 /* ScoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ABDAED1A062B0700452218 /* ScoresButton.png */; };
@@ -58,12 +66,15 @@
 		77B380511A09065E0058C66D /* flappy-ninja-text4.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B3804E1A09065E0058C66D /* flappy-ninja-text4.png */; };
 		77B380531A091A950058C66D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B380521A091A950058C66D /* AddressBook.framework */; };
 		77B380551A091ABE0058C66D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B380541A091ABE0058C66D /* AddressBookUI.framework */; };
+<<<<<<< HEAD
 		77B384581A0F6018006FDF17 /* instructions-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384521A0F6018006FDF17 /* instructions-3.png */; };
 		77B384591A0F6018006FDF17 /* instructions-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384531A0F6018006FDF17 /* instructions-4.png */; };
 		77B3845A1A0F6018006FDF17 /* instructions-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384541A0F6018006FDF17 /* instructions-6.png */; };
 		77B3845B1A0F6018006FDF17 /* instructions-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384551A0F6018006FDF17 /* instructions-2.png */; };
 		77B3845C1A0F6018006FDF17 /* instructions-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384561A0F6018006FDF17 /* instructions-5.png */; };
 		77B3845D1A0F6018006FDF17 /* instructions-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B384571A0F6018006FDF17 /* instructions-1.png */; };
+=======
+>>>>>>> origin/master
 		77B5EC701A0E53BD00549A91 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B5EC6F1A0E53BD00549A91 /* SenTestingKit.framework */; };
 		77B5EC751A0E87EB00549A91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B5EC741A0E87EB00549A91 /* Parse.framework */; };
 		77B5EC761A0E882600549A91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B5EC741A0E87EB00549A91 /* Parse.framework */; };
@@ -130,6 +141,14 @@
 		7713BD0C1A0F506A00101FE9 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7713BD0D1A0F506A00101FE9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		7713BD0E1A0F506A00101FE9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		7713BD121A0F529200101FE9 /* ins01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ins01.png; sourceTree = "<group>"; };
+		7713BD131A0F529200101FE9 /* ins02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ins02.png; sourceTree = "<group>"; };
+		7713BD141A0F529200101FE9 /* ins03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ins03.png; sourceTree = "<group>"; };
+		7713BD151A0F529200101FE9 /* ins04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ins04.png; sourceTree = "<group>"; };
+		7713BD161A0F529200101FE9 /* ins05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ins05.jpg; sourceTree = "<group>"; };
+>>>>>>> origin/master
 		77ABDAEA1A062AE900452218 /* GameStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameStart.png; sourceTree = "<group>"; };
 		77ABDAEC1A062B0700452218 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
 		77ABDAED1A062B0700452218 /* ScoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoresButton.png; sourceTree = "<group>"; };
@@ -176,12 +195,15 @@
 		77B3804E1A09065E0058C66D /* flappy-ninja-text4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flappy-ninja-text4.png"; sourceTree = "<group>"; };
 		77B380521A091A950058C66D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		77B380541A091ABE0058C66D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
 		77B384521A0F6018006FDF17 /* instructions-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-3.png"; sourceTree = "<group>"; };
 		77B384531A0F6018006FDF17 /* instructions-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-4.png"; sourceTree = "<group>"; };
 		77B384541A0F6018006FDF17 /* instructions-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-6.png"; sourceTree = "<group>"; };
 		77B384551A0F6018006FDF17 /* instructions-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-2.png"; sourceTree = "<group>"; };
 		77B384561A0F6018006FDF17 /* instructions-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-5.png"; sourceTree = "<group>"; };
 		77B384571A0F6018006FDF17 /* instructions-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-1.png"; sourceTree = "<group>"; };
+=======
+>>>>>>> origin/master
 		77B5EC6F1A0E53BD00549A91 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		77B5EC721A0E83F600549A91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		77B5EC741A0E87EB00549A91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../parse-library-1.4.2/Parse.framework"; sourceTree = "<group>"; };
@@ -279,12 +301,20 @@
 		7713BD111A0F527B00101FE9 /* Instructions */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				77B384571A0F6018006FDF17 /* instructions-1.png */,
 				77B384551A0F6018006FDF17 /* instructions-2.png */,
 				77B384521A0F6018006FDF17 /* instructions-3.png */,
 				77B384531A0F6018006FDF17 /* instructions-4.png */,
 				77B384561A0F6018006FDF17 /* instructions-5.png */,
 				77B384541A0F6018006FDF17 /* instructions-6.png */,
+=======
+				7713BD121A0F529200101FE9 /* ins01.png */,
+				7713BD131A0F529200101FE9 /* ins02.png */,
+				7713BD141A0F529200101FE9 /* ins03.png */,
+				7713BD151A0F529200101FE9 /* ins04.png */,
+				7713BD161A0F529200101FE9 /* ins05.jpg */,
+>>>>>>> origin/master
 			);
 			name = Instructions;
 			sourceTree = "<group>";
@@ -608,6 +638,8 @@
 				77B6E01D1A0D0DCA00F143F3 /* rotating-star-6.png in Resources */,
 				77ABDAEE1A062B0700452218 /* PlayButton.png in Resources */,
 				77BB2A6B1A05026F00B211CF /* background-music.mp3 in Resources */,
+				7713BD1A1A0F529200101FE9 /* ins04.png in Resources */,
+				7713BD191A0F529200101FE9 /* ins03.png in Resources */,
 				77B2A0041A0BBD1C000E9EDC /* game-logo-3.png in Resources */,
 				77BB2A741A0507BE00B211CF /* flappy-ninja-flipped.png in Resources */,
 				77BB2A6D1A05026F00B211CF /* ninja-down-effect.mp3 in Resources */,
@@ -640,11 +672,14 @@
 				7705EBFA1A0D615D00DEBF34 /* table-view-background-dark-cell.png in Resources */,
 				7705EBFF1A0D6A0400DEBF34 /* instructions.png in Resources */,
 				77BB2A781A0507EF00B211CF /* top.png in Resources */,
+				7713BD1B1A0F529200101FE9 /* ins05.jpg in Resources */,
 				77B2A0071A0BBD1C000E9EDC /* game-logo-6.png in Resources */,
 				77B384581A0F6018006FDF17 /* instructions-3.png in Resources */,
 				77B6E0191A0D0DCA00F143F3 /* rotating-star-2.png in Resources */,
+				7713BD171A0F529200101FE9 /* ins01.png in Resources */,
 				77B6E01B1A0D0DCA00F143F3 /* rotating-star-4.png in Resources */,
 				77B6E0101A0CEAE800F143F3 /* explosion-7.png in Resources */,
+				7713BD181A0F529200101FE9 /* ins02.png in Resources */,
 				77ABDAEB1A062AE900452218 /* GameStart.png in Resources */,
 				77BB2A821A05083A00B211CF /* column-top.png in Resources */,
 			);
