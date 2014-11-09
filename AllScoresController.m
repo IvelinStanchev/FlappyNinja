@@ -10,12 +10,12 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "AllScoresCell.h"
+#import "GameController.h"
 
 @interface AllScoresController ()
 
 @property (nonatomic, strong) NSString *dataFilePath;
 @property AllScoresCell *allScoresCell;
-
 @property int lastTappedIndex;
 
 @end
@@ -124,7 +124,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     [self downloadData];
     
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"scores-background.png"]];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"table-view-background.png"]];
     
     [super viewDidLoad];
 }
@@ -188,7 +188,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     }
     
     if (indexPath.row % 2 == 0) {
-        cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"scores-background-dark-cell.png"]];
+        cell.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"table-view-background-dark-cell.png"]];
     }
     
     cell.position.textColor = [UIColor yellowColor];
@@ -203,10 +203,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     cell.position.text = [NSString stringWithFormat:@"%i#", indexPath.row + 1];
     cell.username.text = [NSString stringWithFormat:@"%@", [self.dataArray objectAtIndex:indexPath.row][@"Username"]];
     cell.points.text = [NSString stringWithFormat:@"%@", [self.dataArray objectAtIndex:indexPath.row][@"Points"]];
-    
-//    NSString *justObject = [NSString stringWithFormat:@"%i#      %@ : 2f%@", indexPath.row + 1, [self.dataArray objectAtIndex:indexPath.row][@"Username"], [self.dataArray objectAtIndex:indexPath.row][@"Points"]];
-    
-    //[cell.textLabel setText: justObject];
     
     return cell;
 }

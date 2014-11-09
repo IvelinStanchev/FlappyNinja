@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface AllScoresController : UITableViewController<ABPeoplePickerNavigationControllerDelegate, UIAccelerometerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface AllScoresController : UITableViewController<ABPeoplePickerNavigationControllerDelegate, UIAccelerometerDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (strong) NSMutableArray *dataArray;
 @property (strong) UIAlertView *gettingDataAlert;
