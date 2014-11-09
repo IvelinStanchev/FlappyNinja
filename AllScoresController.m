@@ -10,12 +10,12 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "AllScoresCell.h"
+#import "GameController.h"
 
 @interface AllScoresController ()
 
 @property (nonatomic, strong) NSString *dataFilePath;
 @property AllScoresCell *allScoresCell;
-
 @property int lastTappedIndex;
 
 @end
@@ -203,10 +203,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     cell.position.text = [NSString stringWithFormat:@"%i#", indexPath.row + 1];
     cell.username.text = [NSString stringWithFormat:@"%@", [self.dataArray objectAtIndex:indexPath.row][@"Username"]];
     cell.points.text = [NSString stringWithFormat:@"%@", [self.dataArray objectAtIndex:indexPath.row][@"Points"]];
-    
-//    NSString *justObject = [NSString stringWithFormat:@"%i#      %@ : 2f%@", indexPath.row + 1, [self.dataArray objectAtIndex:indexPath.row][@"Username"], [self.dataArray objectAtIndex:indexPath.row][@"Points"]];
-    
-    //[cell.textLabel setText: justObject];
     
     return cell;
 }

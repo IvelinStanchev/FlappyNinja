@@ -12,7 +12,7 @@
 
 NSString *pathToBackgroundSound;
 
-@interface MenuViewController : UIViewController<UIViewControllerTransitioningDelegate>{
+@interface MenuViewController : UIViewController<UIViewControllerTransitioningDelegate, UIActionSheetDelegate>{
     AVAudioPlayer *audioPlayerBackgroundSound;
     IBOutlet UIButton *NinjaText;
 }

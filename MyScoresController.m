@@ -98,22 +98,19 @@
                                delegate:self
                       cancelButtonTitle:@"Cancel"
                       otherButtonTitles:@"Ok", nil] show];
-    
-    NSLog(@"%i", row);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    
     [[[UIAlertView alloc] initWithTitle:@"Failed to get location!"
-                                message:@"Failed to get location!"
+                                message:nil
                                delegate:self
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil] show];
     
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)receivedManager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     
     CLLocation *currentLocation = newLocation;
@@ -143,7 +140,7 @@
             
             [userData saveInBackground];
             
-            [manager stopUpdatingLocation];
+            [receivedManager stopUpdatingLocation];
             
             [waitingAlert dismissWithClickedButtonIndex:-1 animated:YES];
             
@@ -156,9 +153,8 @@
             [self.view endEditing:YES];
             
         } else {
-            
             [[[UIAlertView alloc] initWithTitle:@"Error occurred!"
-                                        message:@"Error occurred!"
+                                        message:nil
                                        delegate:self
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
@@ -178,7 +174,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
         if (networkStatus == NotReachable) {
             [[[UIAlertView alloc] initWithTitle:@"No Internet Connection!"
-                                        message:@"No connection available!"
+                                        message:nil
                                        delegate:self
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
@@ -210,7 +206,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     MyScoresCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = (MyScoresCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     if (indexPath.row % 2 == 0) {
@@ -234,17 +230,14 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     NSString *formattedDateString = [dateFormatter stringFromDate: [device valueForKey:@"scoredate"]];
     
-    //cell.position.text = [NSString stringWithFormat:@"%i#", indexPath.row + 1];
     cell.username.text = [NSString stringWithFormat:@"%@", [device valueForKey:@"username"]];
     cell.points.text = [NSString stringWithFormat:@"%@", [device valueForKey:@"userscore"]];
     cell.date.text = formattedDateString;
-//    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@ %@", [device valueForKey:@"username"], [device valueForKey:@"userscore"], [device valueForKey:@"scoredate"]]];
     
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     return  YES;
 }
 

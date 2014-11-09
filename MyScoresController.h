@@ -14,6 +14,6 @@
 @property (strong) NSMutableArray *scoresArray;
 @property (strong) UIAlertView *gettingDataAlert;
 
--(void)publishCurrentRow: (int) rowIndex;
+- (void)publishCurrentRow: (int) rowIndex;
 
 @end

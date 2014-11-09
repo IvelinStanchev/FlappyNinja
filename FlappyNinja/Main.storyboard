@@ -218,26 +218,46 @@
             </objects>
             <point key="canvasLocation" x="1" y="-183"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="dNq-8h-grG">
             <objects>
-                <viewController id="cwK-4W-81y" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hJy-4I-AO4"/>
-                        <viewControllerLayoutGuide type="bottom" id="dDy-xl-f20"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fm5-O5-Wtz">
+                <viewController id="cwK-4W-81y" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="252" sectionHeaderHeight="22" sectionFooterHeight="22" id="DzQ-cR-9sm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-ww-JTx" customClass="Instructions">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="252" id="rYf-qs-eQ0" customClass="CustomCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rYf-qs-eQ0" id="LZN-Ko-Hgg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxg-py-ii1">
+                                            <rect key="frame" x="10" y="9" width="156" height="222"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u0-Ti-id1">
+                                            <rect key="frame" x="167" y="9" width="139" height="222"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageInCell" destination="Fxg-py-ii1" id="gQ1-kJ-haU"/>
+                                    <outlet property="textInCell" destination="6u0-Ti-id1" id="X7e-8c-SRT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cwK-4W-81y" id="pU7-nF-y6s"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="pQx-b1-DtX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="da3-9n-dgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,8 +383,8 @@
                                     <constraint firstAttribute="height" constant="128" id="ooq-Dz-Vok"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="column-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-b7-udU">
-                                <rect key="frame" x="230" y="-236" width="75" height="500"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="column-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-b7-udU">
+                                <rect key="frame" x="230" y="-238" width="75" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="XzQ-Qm-0ER"/>

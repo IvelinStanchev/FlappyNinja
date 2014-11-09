@@ -12,22 +12,6 @@
 #import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
 
-int NinjaFlight;
-int RandomTopTunnelPosition;
-int RandomBottomTunnelPosition;
-int RandomStarPosition;
-int RandomTopColumnHeight;
-BOOL isCalled;
-BOOL gameHasBegun;
-BOOL ninjaDown;
-BOOL isCalledFromStar;
-UIImageView *starAnimationSubView;
-int ninjaDownCount;
-NSString *pathToGetPointSound;
-NSString *pathToNinjaCrashSound;
-//UITapGestureRecognizer *doubleTapGesture;
-//UITapGestureRecognizer *singleTapGesture;
-
 @interface GameController : UIViewController{
     
     IBOutlet UIImageView *Ninja;
@@ -56,26 +40,27 @@ NSString *pathToNinjaCrashSound;
     AVAudioPlayer *audioPlayerGetPointSound;
     AVAudioPlayer *audioPlayerNinjaCrash;
     AVAudioSession *audiosession;
-    
 }
 
-@property (nonatomic,strong) UILongPressGestureRecognizer *longPresses;
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
-@property int scores;
-@property (strong) NSManagedObject *scoresdb;
+@property (nonatomic, strong) NSManagedObject *scoresdb;
+@property (nonatomic, strong) UIImageView *NinjaForTesting;
+@property (nonatomic, strong) UIImageView *ColumnTopForTesting;
+@property (nonatomic, strong) UIImageView *ColumnBottomForTesting;
+@property (nonatomic, strong) UIImageView *TopForTesting;
+@property (nonatomic, strong) UIImageView *BottomForTesting;
 
 - (IBAction)PublishScore:(id)sender;
 - (IBAction)SaveToMyScores:(id)sender;
 - (IBAction)TryAgain:(id)sender;
 - (IBAction)Exit:(id)sender;
--(void)NinjaMoving;
--(void)TunnelMoving;
--(void)StarMoving;
--(void)PlaceTunnels;
--(void)PlaceStar;
--(void)Score;
--(void)GameOver;
--(void)GetPointSound;
--(void)ninjaCrashSound;
+- (void)NinjaMoving;
+- (void)TunnelMoving;
+- (void)StarMoving;
+- (void)PlaceTunnels;
+- (void)PlaceStar;
+- (void)Score;
+- (void)GameOver;
+- (void)GetPointSound;
+- (BOOL) ninjaCollidedWithObject: (NSArray*) framesObjects : (GameController *) controller;
 
 @end

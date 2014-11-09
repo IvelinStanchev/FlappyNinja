@@ -36,9 +36,7 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void) testIt{
-    NSLog(@"In the background");
-    
+- (void)gettingData{
     PFQuery *objects = [PFQuery queryWithClassName:@"Results"];
     [objects orderByDescending:@"Points"];
     
@@ -79,7 +77,7 @@
         backgroundTask = UIBackgroundTaskInvalid;
     }];
     
-    gettingDataTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(testIt) userInfo:nil repeats:YES];
+    gettingDataTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(gettingData) userInfo:nil repeats:YES];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -88,8 +86,6 @@
     
     [application endBackgroundTask:backgroundTask];
     backgroundTask = UIBackgroundTaskInvalid;
-    
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -109,8 +105,6 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
