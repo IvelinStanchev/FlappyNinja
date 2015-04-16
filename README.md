@@ -22,10 +22,14 @@ The game is about a ninja which must go through obstacles and gain scores for ea
 <li>Core data used in User Scores view</li>
 <li>Remote data used in All Scores view</li>
 <li>Gestures and functionality</li>
-<li>•	Double click – promotes the score</li>
-<li> •	Long Click adds a contact</li>
-<li> •	Single tab- starts the game</li>
-<li> •	Swipe removes the score</li>
-<li> •	Pinch extends the image</li>
+<li>Double click – promotes the score</li>
+<li>Long Click adds a contact</li>
+<li>Single tab- starts the game</li>
+<li>Swipe removes the score</li>
+<li>Pinch extends the image</li>
 </ul>
 
+<p>
+  <img src="http://alfa.kachi-snimka.info/images-2013/bwy1429198462j.png" />
+  <img src="http://alfa.kachi-snimka.info/images-2013/klz1429198668y.png" />
+</p>
